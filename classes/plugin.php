@@ -3,7 +3,7 @@ class Plugin {
 	private $dbh;
 	private $host;
 
-	const API_VERSION_COMPAT = 1;
+	const API_VERSION_COMPAT = 2;
 
 	function init($host) {
 		$this->dbh = $host->get_dbh();
@@ -11,8 +11,8 @@ class Plugin {
 	}
 
 	function about() {
-		// version, name, description, author, is_system
-		return array(1.0, "plugin", "No description", "No author", false);
+		// plugin version, description, author, is_system, link
+		return array(1.0, "No description", "Author", false, "http://example.com/plugin");
 	}
 
 	function get_js() {
